@@ -4,39 +4,47 @@
     android:layout_height="@dimen/_200sdp"
     android:padding="@dimen/_5sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <View
+        android:id="@+id/view_color_preview"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/view_color_preview"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/txt_rgb"
-        app:layout_constraintTop_toBottomOf="@id/view_color_preview"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_10sdp"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_color_preview" />
+
+    <TextView
         android:id="@+id/txt_hex"
-        app:layout_constraintTop_toBottomOf="@id/txt_rgb"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_10sdp"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txt_hsl"
-        app:layout_constraintTop_toBottomOf="@id/txt_hex"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
         android:textColor="@color/textColor"
         android:textSize="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_10sdp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_rgb" />
+
+    <TextView
+        android:id="@+id/txt_hsl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_hex" />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_cancel"
         android:layout_width="wrap_content"

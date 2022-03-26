@@ -2,6 +2,7 @@ package com.hooshmandenergy.colordetectortopublish.handler
 
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.util.Log
 import android.view.View
 import androidx.camera.view.PreviewView
 import com.hooshmandenergy.colordetectortopublish.model.UserColor

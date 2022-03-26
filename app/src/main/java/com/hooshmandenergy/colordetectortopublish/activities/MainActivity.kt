@@ -31,7 +31,6 @@ import com.hooshmandenergy.colordetectortopublish.fragments.ColorsFragment
 import com.hooshmandenergy.colordetectortopublish.handler.ColorDetectHandler
 import com.hooshmandenergy.colordetectortopublish.model.UserColor
 import com.hooshmandenergy.colordetectortopublish.utils.timer
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -76,9 +75,7 @@ class MainActivity : BaseActivity() {
 
     private var isImageShown = false
 
-    private var currentColorList: MutableList<UserColor> =
-        mutableListOf()
-
+    private var currentColorList: MutableList<UserColor> = mutableListOf()
 
     private val colorAdapter: ColorAdapter by lazy {
         ColorAdapter(this) {
@@ -102,12 +99,11 @@ class MainActivity : BaseActivity() {
 
     override fun initControls(savedInstanceState: Bundle?) {
 
-        if (allPermissionsGranted()) {
-
+        if (allPermissionsGranted())
             startCamera()
-        } else {
+        else
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
-        }
+
 
         cameraExecutor = Executors.newSingleThreadExecutor()
 
@@ -128,6 +124,10 @@ class MainActivity : BaseActivity() {
                 val colorDialog = ColorDialog(this, colorViewModel, colorAdapter, clearColorList)
                 colorDialog.show()
             }
+        }
+
+        setting_image.setOnClickListener {
+
         }
 
         btn_change_camera.setOnClickListener {
@@ -317,7 +317,7 @@ class MainActivity : BaseActivity() {
         }
 
         timerTask = CoroutineScope(Dispatchers.Default).timer(1000) {
-            currentColor = colorDetectHandler.detect(camera_preview, pointer)
+            currentColor = colorDetectHandler.detect(bitmap, pointer, marginTop, marginLeft, ratio)
 //            Log.e(TAG, "Color : ${currentColor.hex}")
 
             withContext(Dispatchers.Main) {
