@@ -178,7 +178,7 @@
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
             android:src="@drawable/ic_baseline_settings_24"
             app:layout_constraintBottom_toTopOf="@+id/guideline_bottom2"
             app:layout_constraintRight_toRightOf="parent"

@@ -69,7 +69,7 @@ class ColorDetectHandler {
             hex,
             red.toString(),
             green.toString(),
-            blue.toString()
+            blue.toString(),
         )
 
     }

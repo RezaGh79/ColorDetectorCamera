@@ -25,6 +25,7 @@ import com.hooshmandenergy.colordetectortopublish.R
 import com.hooshmandenergy.colordetectortopublish.adapter.ColorAdapter
 import com.hooshmandenergy.colordetectortopublish.base.BaseActivity
 import com.hooshmandenergy.colordetectortopublish.database.ColorViewModel
+import com.hooshmandenergy.colordetectortopublish.dialog.ColorDetail
 import com.hooshmandenergy.colordetectortopublish.dialog.ColorDetailDialog
 import com.hooshmandenergy.colordetectortopublish.dialog.ColorDialog
 import com.hooshmandenergy.colordetectortopublish.fragments.ColorsFragment
@@ -162,6 +163,11 @@ class MainActivity : BaseActivity() {
             showBottomSheetFragment()
         }
 
+        card_color_preview.setOnClickListener {
+            val colorDetailDialog = ColorDetail(this, currentColor, colorDetectHandler)
+            colorDetailDialog.show()
+        }
+
     }
 
 
@@ -180,7 +186,6 @@ class MainActivity : BaseActivity() {
 
             timerTask = CoroutineScope(Dispatchers.Default).timer(1000) {
                 currentColor = colorDetectHandler.detect(camera_preview, pointer)
-//                Log.e(TAG, "Color : ${currentColor.hex}")
 
                 withContext(Dispatchers.Main) {
                     txt_hex.text = currentColor.hex
