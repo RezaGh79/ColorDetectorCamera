@@ -8,4 +8,6 @@
     <string name="unknown_color">Unknown Color</string>
     <string name="your_color">Saved colors</string>
     <string name="remove">Remove</string>
+    <string name="splash_screen_text">detect and save any color live,\neverywhere you are!</string>
+    <string name="team_name">Argon software group</string>
 </resources>

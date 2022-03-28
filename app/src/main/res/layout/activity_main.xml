@@ -33,6 +33,7 @@
         app:layout_constraintTop_toTopOf="@+id/camera_preview">
 
         <ImageView
+            android:background="?android:attr/selectableItemBackground"
             android:id="@+id/btn_show_camera"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
@@ -44,6 +45,7 @@
             app:tint="@color/colorPrimary" />
 
         <ImageView
+            android:background="?android:attr/selectableItemBackground"
             android:id="@+id/btn_show_colors"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
@@ -90,7 +92,7 @@
                 android:gravity="center"
                 android:text="@string/color_default"
                 android:textColor="@color/textColor"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="@dimen/_11sdp" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -151,6 +153,7 @@
             android:layout_height="@dimen/_24sdp"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_10sdp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_plus"
             app:layout_constraintBottom_toTopOf="@+id/guideline_bottom2"
@@ -179,6 +182,7 @@
             android:layout_height="@dimen/_24sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_7sdp"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/ic_baseline_settings_24"
             app:layout_constraintBottom_toTopOf="@+id/guideline_bottom2"
             app:layout_constraintRight_toRightOf="parent"
@@ -197,6 +201,7 @@
             android:id="@+id/btn_pick_image"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_images_outline"
@@ -212,6 +217,7 @@
             android:id="@+id/btn_pick_color"
             android:layout_width="@dimen/_48sdp"
             android:layout_height="@dimen/_48sdp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_baseline_camera"
@@ -226,6 +232,7 @@
             android:id="@+id/btn_change_camera"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/app_name"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_baseline_flip_camera"
